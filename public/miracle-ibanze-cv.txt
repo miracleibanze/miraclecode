@@ -1,0 +1,20 @@
+Miracle Ibanze
+Full-Stack Developer
+
+Profile
+Focused on building elegant, reliable web products with strong frontend craft, scalable architecture, and thoughtful user experience.
+
+Core Strengths
+- Modern frontend development with React, Next.js, TypeScript, Tailwind CSS, and Framer Motion
+- Scalable product engineering with clean architecture and maintainable component systems
+- Performance-focused implementation, accessibility, and polished user interfaces
+
+Portfolio Snapshot
+- Premium portfolio site built with Next.js App Router
+- Strong emphasis on clarity, responsiveness, and production-ready execution
+
+Public Presence
+- GitHub: https://github.com/miracleibanze
+
+Note
+This downloadable CV is a placeholder text version for the current portfolio build and should be replaced with the final PDF before publishing.
