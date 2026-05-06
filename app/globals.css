@@ -2,12 +2,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0b1c2c;
-  --primary: #0b1c2c;
+  --foreground: #101624;
+  --primary: #101624  ;
   --accent: #d4af37;
-  --muted: #6b7280;
+  --muted: #a0aec0;
   --surface: #f8fafc;
-  --surface-strong: #eef2f7;
+  --surface-strong: #edf2f7;
+
+  /* Extras (needed for clean UI) */
+  --border: #e2e8f0;
+  --hover: #f1f5f9;
+  --accent-soft: rgba(212, 175, 55, 0.15);
 }
 
 @theme inline {
@@ -18,24 +23,33 @@
   --color-muted: var(--muted);
   --color-surface: var(--surface);
   --color-surface-strong: var(--surface-strong);
+
+  /* added mappings */
+  --color-border: var(--border);
+  --color-hover: var(--hover);
+  --color-accent-soft: var(--accent-soft);
+
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 }
-
 
 html {
   scroll-behavior: smooth;
   background: var(--background);
 }
-
 html.dark {
-  --background: #0b1c2c;
+--background: #181d25;
   --foreground: #f8fafc;
-  --primary: #d4af37;
+  --primary: #101624;
   --accent: #d4af37;
-  --muted: #bfc9d1;
-  --surface: #181f2a;
-  --surface-strong: #101624;
+  --muted: #a0aec0; 
+  --surface: #111a27; 
+  --surface-strong: #a0abbc;
+
+  /* Extras (must match light system) */
+  --border: #1f2937;
+  --hover: #1a2433;
+  --accent-soft: rgba(212, 175, 55, 0.2);
 }
 
 * {
@@ -44,13 +58,14 @@ html.dark {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgb(212 175 55 / 0.10), transparent 32%),
-    radial-gradient(circle at top right, rgb(11 28 44 / 0.08), transparent 34%),
-    linear-gradient(180deg, var(--surface) 0%, var(--background) 22%, var(--background) 100%);
+
+  background: var(--background);
+
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a,

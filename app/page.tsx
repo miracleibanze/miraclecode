@@ -13,7 +13,7 @@ export default function Home() {
     <PageShell>
       <div className="relative min-h-screen overflow-x-hidden">
         <Navbar />
-        <main>
+        <main className="pt-16">
           <HeroSection />
           <SkillsSection />
           <AboutSection />
