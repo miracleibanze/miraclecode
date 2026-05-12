@@ -4,33 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Github } from "../ui/Icons";
+import { fullStackProjects } from '@/app/constants'
 
-const projects = [
-    {
-        image: "/project1.jpg",
-        title: "Modern SaaS Dashboard",
-        desc: "A scalable, responsive dashboard for analytics and team management.",
-        tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-        live: "#",
-        github: "#",
-    },
-    {
-        image: "/project2.jpg",
-        title: "E-Commerce Platform",
-        desc: "Full-featured e-commerce with secure checkout and admin panel.",
-        tech: ["React", "Node.js", "MongoDB", "Stripe"],
-        live: "#",
-        github: "#",
-    },
-    {
-        image: "/project3.jpg",
-        title: "Portfolio Website",
-        desc: "A blazing fast, SEO-optimized portfolio for creative professionals.",
-        tech: ["Next.js", "Framer Motion", "Vercel"],
-        live: "#",
-        github: "#",
-    },
-];
+
 
 const smoothEase = [0.22, 1, 0.36, 1] as const;
 
@@ -52,7 +28,7 @@ export function ProjectsSection() {
                 Projects
             </motion.h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, i) => (
+                {fullStackProjects.map((project, i) => (
                     <motion.div
                         key={project.title}
                         initial={{ opacity: 0, y: 32 }}
@@ -83,10 +59,10 @@ export function ProjectsSection() {
                                 {project.title}
                             </h3>
                             <p className="text-sm text-[#6B7280] dark:text-[#bfc9d1]">
-                                {project.desc}
+                                {project.description}
                             </p>
                             <div className="flex flex-wrap gap-2 pt-2">
-                                {project.tech.map((t) => (
+                                {project.technologies.map((t) => (
                                     <span
                                         key={t}
                                         className="rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-3 py-1 text-xs font-medium text-[#0B1C2C] dark:text-[#D4AF37]"
@@ -97,7 +73,7 @@ export function ProjectsSection() {
                             </div>
                             <div className="mt-4 flex gap-3">
                                 <a
-                                    href={project.live}
+                                    href={project.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-4 py-2 text-xs font-semibold text-white shadow transition hover:bg-[#bfa43a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
