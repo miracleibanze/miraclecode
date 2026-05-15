@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Server, Database, Sparkles } from "lucide-react";
+import { Code, Server, Database, Sparkles, Download } from "lucide-react";
+import { ButtonLink } from "@/components/ui/button-link";
 
 const skills = [
     {
@@ -53,51 +54,71 @@ export function SkillsSection() {
         <section
             id="skills"
             aria-labelledby="skills-title"
-            className="mx-auto max-w-7xl px-6 py-16 md:px-12 lg:px-20"
+            className="mx-auto w-full max-w-7xl px-6 md:px-12 pb-16 "
         >
-            <motion.h2
-                id="skills-title"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.7 }}
-                transition={{ duration: 0.7, ease: smoothEase }}
-                className="mb-12 text-center font-display text-4xl font-bold tracking-tight text-[#0B1C2C] md:text-5xl"
-            >
-                Skills
-            </motion.h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {skills.map((skill, i) => (
-                    <motion.div
-                        key={skill.title}
-                        initial={{ opacity: 0, y: 32 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.7, delay: i * 0.08, ease: smoothEase }}
-                        whileHover={{ y: -10, boxShadow: "0 8px 32px -8px #D4AF37AA" }}
-                        className="group flex flex-col items-center rounded-3xl border border-[#0B1C2C]/8 bg-white px-7 py-10 shadow-[0_8px_32px_-12px_rgba(11,28,44,0.08)] transition-all duration-300 hover:border-[#D4AF37]/40 hover:shadow-[0_8px_32px_-8px_rgba(212,175,55,0.18)] focus-within:ring-2 focus-within:ring-[#D4AF37]"
-                        tabIndex={0}
-                        role="region"
-                        aria-labelledby={`skill-${i}-title`}
-                    >
-                        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D4AF37]/10">
-                            {skill.icon}
-                        </div>
-                        <h3
-                            id={`skill-${i}-title`}
-                            className="mb-3 text-lg font-semibold text-[#0B1C2C]"
+            <div className="grid gap-8 lg:grid-cols-7">
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.7 }}
+                    transition={{ duration: 0.7, ease: smoothEase }}
+                    className="lg:col-span-2"
+                >
+                    <h2 className="mb-4 text-2xl font-bold tracking-tight ">
+                        About me
+                    </h2>
+                    <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />
+                    <p className="mb-8 max-w-xl text-sm leading-8 text-primary/70 sm:text-base">
+                        I am a passionate full-stack developer with experience in building modern web applications. I specialize in both front-end and back-end development, delivering clean, efficient and scalable solutions.
+                    </p>
+                    <ButtonLink href="/miracle-ibanze-cv.txt" variant="secondary">
+                        Download CV
+                        <Download className="size-4" />
+                    </ButtonLink>
+                </motion.div>
+
+                <div className="md:grid gap-6 grid-cols-4 lg:col-span-5 flex flex-col">
+                    <div className="md:col-span-4">
+                        <h2 className="mb-4 text-2xl font-bold tracking-tight ">
+                            My Skills
+                        </h2>
+                        <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />
+                    </div>
+                    {skills.map((skill, i) => (
+                        <motion.div
+                            key={skill.title}
+                            initial={{ opacity: 0, y: 32 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.7, delay: i * 0.08, ease: smoothEase }}
+                            whileHover={{ y: -10, boxShadow: "0 12px 30px -16px rgba(212,175,55,0.35)" }}
+                            className="group rounded-lg border-2 border-accent/30 bg-surface/60 p-4 transition-all duration-300 hover:border-[#D4AF37]/40"
+                            tabIndex={0}
+                            role="region"
+                            aria-labelledby={`skill-${i}-title`}
                         >
-                            {skill.title}
-                        </h3>
-                        <ul className="space-y-2 text-center text-sm text-[#6B7280]">
-                            {skill.items.map((item) => (
-                                <li key={item} className="list-inside list-disc">
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-                ))}
+                            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-3xl dark:bg-accent/20 text-accent border-2 border-accent/60">
+                                {skill.icon}
+                            </div>
+                            <h3
+                                id={`skill-${i}-title`}
+                                className="mb-2 text-xl font-semibold "
+                            >
+                                {skill.title}
+                            </h3>
+                            <ul className="space-y-0 text-sm text-primary/70">
+                                {skill.items.map((item) => (
+                                    <li key={item} className="flex items-start gap-2">
+                                        <span className="mt-1 inline-block h-2 min-w-2 rounded-full bg-accent" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
+            <hr className="mt-24 bg-accent/80 border-0 h-0.5 w-full max-w-screen-xl mx-auto" />
         </section>
     );
 }

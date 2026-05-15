@@ -18,7 +18,7 @@ export const frontendProjects = [
     index: 1,
     name: "IMMovies",
     description:
-      "IMMovies is a sleek front-end application built with React and Tailwind CSS, providing users with an intuitive and visually engaging interface for exploring movie concepts. The project emphasizes responsiveness, user-friendly design, and optimal performance across various devices.",
+      "IMMovies is a sleek front-end app showcasing movie ideas with responsive design and fast interactions.",
     detailedDescription:
       "IMMovies is a front-end web application showcasing advanced UI/UX design principles. The interface is built with React for modular development, ensuring maintainable and scalable code. Tailwind CSS was used for styling, enabling a responsive design adaptable to different screen sizes. The application also focuses on performance optimization using Vite for faster build times, while React Router ensures seamless navigation between pages.",
     challengesFaced:
@@ -51,7 +51,7 @@ export const frontendProjects = [
     index: 2,
     name: "Mukingi Secondary School",
     description:
-      "E-S Mukingi is a platform designed to showcase school information, news, and events. The focus was on creating a user-friendly hub for students and staff to interact with educational content and updates.",
+      "E-S Mukingi is a responsive school website presenting news, events, and resources for students and staff.",
     detailedDescription:
       "This project streamlines communication within Mukingi Secondary School by presenting news, events, and educational resources through a clean, responsive interface. Built with React.js and Tailwind CSS, the platform’s design emphasizes simplicity and usability. React’s component-based structure ensured easy updates and maintenance, while responsive layouts cater to users on both desktop and mobile devices.",
     challengesFaced:
@@ -84,7 +84,7 @@ export const frontendProjects = [
     index: 3,
     name: "BrainWave App",
     description:
-      "BrainWave is a front-end application designed to improve focus and productivity by providing users with minimalist visual content in a calming interface.",
+      "BrainWave is a minimalist front-end app focused on calm productivity through simple design and smooth performance.",
     detailedDescription:
       "BrainWave offers a clean, minimalist user interface aimed at enhancing productivity. Built with React.js and Tailwind CSS, the app prioritizes simplicity and performance. The design incorporates calming elements to maintain a distraction-free experience, with lightweight components ensuring smooth performance across devices.",
     challengesFaced:
@@ -119,7 +119,7 @@ export const fullStackProjects = [
   index: 4,
   title: "IMBONI Learn",
   description:
-    "IMBONI Learn is an online learning platform designed to help students study more effectively through structured content, quizzes, assignments, and real-time progress tracking.",
+    "IMBONI Learn is an online learning platform designed to help students discover and master new skills effectively.",
   detailedDescription:
     "IMBONI Learn is a modern e-learning platform built to deliver an interactive study experience. The platform features organized lessons, quizzes, assignments, and user dashboards that display progress and performance. Developed with Next.js for a fast and scalable front-end, the project integrates clean UI components, state management, and dynamic routing. It is crafted to provide a smooth, responsive, and distraction-free learning environment for students across various study disciplines.",
   challengesFaced:
@@ -159,7 +159,7 @@ export const fullStackProjects = [
     index: 5,
     title: "IMConnect",
     description:
-      "IMConnect is a full-stack application designed for seamless communication and collaboration, offering features like real-time messaging, group chats, and media sharing.",
+      "IMConnect is a platform designed for seamless communication and collaboration, offering features like real-time messaging and media sharing.",
     detailedDescription:
       "IMConnect is a dynamic application emphasizing user interaction and collaboration. Built with the MERN stack, it features real-time messaging, group chats, and a clean, responsive interface. The front-end, developed with React, utilizes state management through Context API and hooks, while the back-end, built with Node.js and Express, handles routing and application logic. MongoDB was used for structuring mock data to simulate user interaction scenarios.",
     challengesFaced:
@@ -202,7 +202,7 @@ export const fullStackProjects = [
     index: 6,
     title: "Duhuze Real Estate",
     description:
-      "Duhuze Real Estate is a platform focused on listing, searching, and showcasing properties, offering a seamless experience for users looking to buy, sell, or rent properties.",
+      "Duhuze Real Estate is a platform that connects buyers and sellers of properties, making the process simple and transparent.",
     detailedDescription:
       "Duhuze Real Estate is a website dedicated to the Rwandan property market, featuring advanced property search, filtering, and responsive design. Built using modern technologies, it provides an intuitive interface for property discovery and engagement. The platform prioritizes simplicity and accessibility for its target audience.",
     challengesFaced:

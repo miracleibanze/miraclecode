@@ -52,7 +52,7 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ ...revealTransition, delay: 0.05 }}
-                        className="px-3 text-sm py-0 font-semibold tracking-[0.1em] text-accent"
+                        className="px-3 text-md py-0 font-semibold tracking-[0.1em] text-accent"
                     >
                         Hi, I&apos;m
                     </motion.p>
@@ -166,6 +166,7 @@ export function HeroSection() {
                         </motion.div>
                 </motion.div>
             </div>
+            <hr className="mt-24 bg-accent/80 border-0 h-0.5 w-full max-w-screen-xl mx-auto" />
         </section>
     );
 }

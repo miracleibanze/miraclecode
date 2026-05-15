@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, Users, ShieldCheck, TrendingUp } from "lucide-react";
+import { Code, Target, Users, Zap } from "lucide-react";
 
 const features = [
     {
-        icon: <Lightbulb className="size-7 text-[#D4AF37]" aria-hidden="true" />, // Innovation
-        title: "Creative Problem Solving",
-        desc: "Inventive solutions for complex challenges, always with a user-first mindset.",
+        icon: <Zap className="size-10 text-accent" aria-hidden="true" />,
+        title: "Fast Delivery",
+        desc: "I deliver quality solutions within the agreed time.",
     },
     {
-        icon: <TrendingUp className="size-7 text-[#D4AF37]" aria-hidden="true" />, // Growth
-        title: "Scalable Engineering",
-        desc: "Builds that grow with your business, using robust, modern technologies.",
+        icon: <Target className="size-10 text-accent" aria-hidden="true" />,
+        title: "Problem Solving",
+        desc: "I love solving problems and turning ideas into reality.",
     },
     {
-        icon: <ShieldCheck className="size-7 text-[#D4AF37]" aria-hidden="true" />, // Reliability
-        title: "Quality & Reliability",
-        desc: "Code you can trust—tested, maintainable, and built for the long haul.",
+        icon: <Users className="size-10 text-accent" aria-hidden="true" />,
+        title: "User Focused",
+        desc: "I build with the end-user in mind for the best experience.",
     },
     {
-        icon: <Users className="size-7 text-[#D4AF37]" aria-hidden="true" />, // Collaboration
-        title: "Collaboration",
-        desc: "Clear communication and teamwork, from kickoff to launch and beyond.",
+        icon: <Code className="size-10 text-accent" aria-hidden="true" />,
+        title: "Clean Code",
+        desc: "I write clean, maintainable and scalable code.",
     },
 ];
 
@@ -41,11 +41,12 @@ export function WhatIBringSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.7, ease: smoothEase }}
-                className="mb-12 text-center font-display text-4xl font-bold tracking-tight text-[#0B1C2C] dark:text-white md:text-5xl"
+                className="text-center font-display text-2xl font-bold tracking-tight dark:text-white md:text-4xl mb-4"
             >
                 What I Bring
             </motion.h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <hr className="mb-14 bg-accent h-1 rounded-full border-0 w-12 mx-auto" />
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {features.map((feature, i) => (
                     <motion.div
                         key={feature.title}
@@ -53,27 +54,28 @@ export function WhatIBringSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.7, delay: i * 0.08, ease: smoothEase }}
-                        whileHover={{ y: -8, boxShadow: "0 8px 32px -8px #D4AF37AA" }}
-                        className="group flex flex-col items-center rounded-3xl border border-[#0B1C2C]/8 bg-white dark:bg-[#101624] px-7 py-10 shadow-[0_8px_32px_-12px_rgba(11,28,44,0.08)] transition-all duration-300 hover:border-[#D4AF37]/40 hover:shadow-[0_8px_32px_-8px_rgba(212,175,55,0.18)] focus-within:ring-2 focus-within:ring-[#D4AF37]"
+                        whileHover={{ y: -8, boxShadow: "0 16px 40px -24px rgba(212,175,55,0.35)" }}
+                        className="group flex h-full flex-col items-start rounded-3xl border border-accent/40 bg-white dark:bg-surface p-8 shadow-[0_16px_48px_-30px_rgba(11,28,44,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_16px_48px_-24px_rgba(212,175,55,0.22)] focus-within:ring-2 focus-within:ring-accent"
                         tabIndex={0}
                         role="region"
                         aria-labelledby={`feature-${i}-title`}
                     >
-                        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D4AF37]/10">
+                        <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-accent">
                             {feature.icon}
                         </div>
                         <h3
                             id={`feature-${i}-title`}
-                            className="mb-2 text-base font-semibold text-[#0B1C2C] dark:text-white"
+                            className="mb-3 text-lg font-semibold"
                         >
                             {feature.title}
                         </h3>
-                        <p className="text-center text-sm text-[#6B7280] dark:text-[#bfc9d1]">
+                        <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
                             {feature.desc}
                         </p>
                     </motion.div>
                 ))}
             </div>
+            <hr className="mt-24 bg-accent/80 border-0 h-0.5 w-full max-w-screen-xl mx-auto" />
         </section>
     );
 }

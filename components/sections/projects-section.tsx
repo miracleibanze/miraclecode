@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import { Github } from "../ui/Icons";
 import { fullStackProjects } from '@/app/constants'
+import { Github } from "@/components/ui/Icons";
 
 
 
@@ -23,10 +23,11 @@ export function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.7, ease: smoothEase }}
-                className="mb-12 text-center font-display text-4xl font-bold tracking-tight text-[#0B1C2C] dark:text-white md:text-5xl"
+                className="mb-4 text-center font-display text-3xl font-bold tracking-tight text-[#0B1C2C] dark:text-white md:text-4xl"
             >
                 Projects
             </motion.h2>
+            <hr className="mb-14 bg-accent h-1 rounded-full border-0 w-12 mx-auto" />
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {fullStackProjects.map((project, i) => (
                     <motion.div
@@ -71,24 +72,24 @@ export function ProjectsSection() {
                                     </span>
                                 ))}
                             </div>
-                            <div className="mt-4 flex gap-3">
-                                <a
-                                    href={project.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-4 py-2 text-xs font-semibold text-white shadow transition hover:bg-[#bfa43a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
-                                >
-                                    <ExternalLink className="size-4" /> Live Demo
-                                </a>
-                                <a
-                                    href={project.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1 rounded-full border border-[#D4AF37] px-4 py-2 text-xs font-semibold text-[#0B1C2C] dark:text-[#D4AF37] transition hover:bg-[#D4AF37]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
-                                >
-                                    <Github className="size-4" /> GitHub
-                                </a>
-                            </div>
+                        </div>
+                        <div className="border-t border-accent/80 py-4 flex justify-between px-4 gap-3">
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
+                            >
+                                Live Demo <ExternalLink className="size-4" />
+                            </a>
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
+                            >
+                                <Github className="size-4" /> GitHub
+                            </a>
                         </div>
                     </motion.div>
                 ))}

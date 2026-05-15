@@ -16,7 +16,6 @@ export default function Home() {
         <main className="pt-16">
           <HeroSection />
           <SkillsSection />
-          <AboutSection />
           <WhatIBringSection />
           <ProjectsSection />
           <ContactSection />
