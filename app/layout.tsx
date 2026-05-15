@@ -45,6 +45,24 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${sora.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const stored = localStorage.getItem("theme");
+                const isDark = stored === "dark" || 
+                  (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+                if (isDark) {
+                  document.documentElement.classList.add("dark");
+                } else {
+                  document.documentElement.classList.remove("dark");
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full bg-background text-foreground">{children}</body>
     </html>
   );

@@ -1,10 +1,11 @@
-import { Linkedin, Twitter, Github } from "../ui/Icons";
+import { Instagram, Twitter, Github, Whatsapp } from "../ui/Icons";
 import Link from "next/link";
 
 const socials = [
     { href: "https://github.com/miracleibanze", icon: Github, label: "GitHub" },
-    { href: "https://linkedin.com/in/miracleibanze", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://twitter.com/miracleibanze", icon: Twitter, label: "Twitter" },
+    { href: "https://www.instagram.com/miracle_ibanze/", icon: Instagram, label: "Instagram" },
+    { href: "https://x.com/ibanzemiracle", icon: Twitter, label: "Twitter" },
+    { href: "https://wa.me/+250794881466", icon: Whatsapp, label: "WhatsApp" },
 ];
 
 export function Footer() {

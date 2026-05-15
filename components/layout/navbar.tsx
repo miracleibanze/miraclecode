@@ -44,7 +44,7 @@ export function Navbar() {
             
             <div
                 className={[
-                    "fixed top-0 right-0 left-0 bg-background border-b-2 border-accent",
+                    "fixed top-0 right-0 left-0 bg-background border-b-2 border-b-accent",
                     "transition-all duration-300",
                     isScrolled
                         ? "shadow-[0_18px_40px_-30px_rgba(11,28,44,0.45)] backdrop-blur-xl"
@@ -54,7 +54,7 @@ export function Navbar() {
                 <div className="mx-auto max-w-7xl flex items-center justify-between gap-6 px-4 py-3 md:px-6">
                     <a
                         href="#home"
-                        className="font-display text-xl font-semibold tracking-[-0.04em] text-foreground outline-none focus-visible:rounded-md focus-visible:ring-4 focus-visible:ring-[#D4AF37]/30"
+                        className="font-display text-xl font-semibold tracking-[-0.04em] text-primary outline-none focus-visible:rounded-md focus-visible:ring-4 focus-visible:ring-[#D4AF37]/30"
                     >
                         Miracle.
                     </a>
@@ -67,7 +67,7 @@ export function Navbar() {
                             <a
                                 key={item.href}
                                 href={item.href}
-                                className="text-sm font-medium text-foreground outline-none focus-visible:rounded-md focus-visible:ring-4 focus-visible:ring-[#D4AF37]/25"
+                                className="text-sm font-medium text-primary outline-none focus-visible:rounded-md focus-visible:ring-4 focus-visible:ring-[#D4AF37]/25"
                             >
                                 {item.label}
                             </a>
@@ -86,7 +86,7 @@ export function Navbar() {
                             aria-controls="mobile-navigation"
                             aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                             onClick={() => setIsMenuOpen((current) => !current)}
-                            className="inline-flex size-11 items-center justify-center rounded-full border border-foreground bg-white text-foreground shadow-[0_10px_25px_-18px_rgba(11,28,44,0.5)] outline-none hover:border-[#D4AF37]/50 hover:text-[#D4AF37] focus-visible:ring-4 focus-visible:ring-[#D4AF37]/30 md:hidden"
+                            className="inline-flex size-11 items-center justify-center rounded-full border border-foreground bg-white text-primary shadow-[0_10px_25px_-18px_rgba(11,28,44,0.5)] outline-none hover:border-[#D4AF37]/50 hover:text-[#D4AF37] focus-visible:ring-4 focus-visible:ring-[#D4AF37]/30 md:hidden"
                         >
                             {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
                         </button>
@@ -112,7 +112,7 @@ export function Navbar() {
                                         key={item.href}
                                         href={item.href}
                                         onClick={closeMenu}
-                                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-foreground outline-none hover:bg-[#F8FAFC] focus-visible:ring-4 focus-visible:ring-[#D4AF37]/20"
+                                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-primary outline-none hover:bg-[#F8FAFC] focus-visible:ring-4 focus-visible:ring-[#D4AF37]/20"
                                     >
                                         {item.label}
                                     </a>
@@ -129,7 +129,6 @@ export function Navbar() {
                         </motion.div>
                     ) : null}
                 </AnimatePresence>
-                <hr className="bg-accent h-0.5 m-0" />
             </div>
             
         </motion.header>
