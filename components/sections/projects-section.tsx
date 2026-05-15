@@ -43,7 +43,7 @@ export function ProjectsSection() {
                     >
                         <div className="relative aspect-[16/10] w-full overflow-hidden">
                             <Image
-                                src={project.image}
+                                src={project.image.img}
                                 alt={project.title}
                                 fill
                                 className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -81,7 +81,7 @@ export function ProjectsSection() {
                                     <ExternalLink className="size-4" /> Live Demo
                                 </a>
                                 <a
-                                    href={project.github}
+                                    href={project.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1 rounded-full border border-[#D4AF37] px-4 py-2 text-xs font-semibold text-[#0B1C2C] dark:text-[#D4AF37] transition hover:bg-[#D4AF37]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"

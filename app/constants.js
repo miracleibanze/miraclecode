@@ -29,8 +29,7 @@ export const frontendProjects = [
     status: "Completed",
     image: {
       img: IMMoviesProject,
-      imgPlaceHolder: IMMoviesProjectSmall,
-      backCover: IMMoviesBack,
+      imgPlaceHolder: IMMoviesProjectSmall
     },
     url: "https://immovies.vercel.app/",
     additionalLinks: [
@@ -64,7 +63,6 @@ export const frontendProjects = [
     image: {
       img: MukingiSSProject,
       imgPlaceHolder: MukingiSSProjectSmall,
-      backCover: ESMukingiBack,
     },
     url: "https://e-s-mukingi.vercel.app/",
     additionalLinks: [
@@ -98,7 +96,6 @@ export const frontendProjects = [
     image: {
       img: brainwaveProject,
       imgPlaceHolder: brainwaveProjectSmall,
-      backCover: IMBrainwaveBack,
     },
     url: "https://imbrainwave.vercel.app/",
     additionalLinks: [
@@ -140,7 +137,6 @@ export const fullStackProjects = [
   image: {
     img: IMBONILearn,
     imgPlaceHolder: IMBONILearn,
-    backCover: IMBONILearn,
   },
   url: "https://imboni-learn.vercel.app/",
   additionalLinks: [
@@ -181,7 +177,6 @@ export const fullStackProjects = [
     image: {
       img: IMConnectProject,
       imgPlaceHolder: IMConnectProjectSmall,
-      backCover: IMConnectBack,
     },
     url: "https://imconnect.netlify.app/",
     additionalLinks: [
@@ -225,7 +220,6 @@ export const fullStackProjects = [
     image: {
       img: DuhuzeProject,
       imgPlaceHolder: DuhuzeProjectSmall,
-      backCover: DuhuzeProject,
     },
     url: "https://Duhuze.netlify.app/",
     additionalLinks: [
