@@ -64,7 +64,7 @@ export function SkillsSection() {
                     transition={{ duration: 0.7, ease: smoothEase }}
                     className="lg:col-span-2"
                 >
-                    <h2 className="mb-4 text-2xl font-bold tracking-tight ">
+                    <h2 className="mb-2 text-2xl font-bold tracking-tight ">
                         About me
                     </h2>
                     <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />
@@ -79,7 +79,7 @@ export function SkillsSection() {
 
                 <div className="md:grid gap-6 grid-cols-4 lg:col-span-5 flex flex-col">
                     <div className="md:col-span-4">
-                        <h2 className="mb-4 text-2xl font-bold tracking-tight ">
+                        <h2 className="mb-2 text-2xl font-bold tracking-tight ">
                             My Skills
                         </h2>
                         <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />

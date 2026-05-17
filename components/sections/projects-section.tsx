@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { Book, ExternalLink, FolderGit, GitBranch, GitCommit } from "lucide-react";
 import { fullStackProjects } from '@/app/constants'
-import { Github } from "@/components/ui/Icons";
+import { Github, Whatsapp, Instagram, Twitter} from "@/components/ui/Icons";
 
 
 
@@ -23,7 +23,7 @@ export function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.7 }}
                 transition={{ duration: 0.7, ease: smoothEase }}
-                className="mb-4 text-center font-display text-3xl font-bold tracking-tight text-[#0B1C2C] dark:text-white md:text-4xl"
+                className="mb-2 text-center font-display text-3xl font-bold tracking-tight text-[#0B1C2C] dark:text-white md:text-4xl"
             >
                 Projects
             </motion.h2>
@@ -52,14 +52,14 @@ export function ProjectsSection() {
                                 loading="lazy"
                             />
                         </div>
-                        <div className="flex flex-1 flex-col gap-3 p-6">
+                        <div className="flex flex-1 flex-col gap-3 px-6 py-3">
                             <h3
                                 id={`project-${i}-title`}
                                 className="text-lg font-semibold text-[#0B1C2C] dark:text-white"
                             >
                                 {project.title}
                             </h3>
-                            <p className="text-sm text-[#6B7280] dark:text-[#bfc9d1]">
+                            <p className="text-sm text-primary/70 dark:text-[#bfc9d1]">
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-2 pt-2">
@@ -73,12 +73,12 @@ export function ProjectsSection() {
                                 ))}
                             </div>
                         </div>
-                        <div className="border-t border-accent/80 py-4 flex justify-between px-4 gap-3">
+                        <div className="border-t border-accent/80 py-2 flex justify-between px-4 gap-3">
                             <a
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
+                                className="bg-accent/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
                             >
                                 Live Demo <ExternalLink className="size-4" />
                             </a>
@@ -86,9 +86,9 @@ export function ProjectsSection() {
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
+                                className="bg-accent/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
                             >
-                                <Github className="size-4" /> GitHub
+                                <FolderGit className="size-5" /> GitHub
                             </a>
                         </div>
                     </motion.div>
