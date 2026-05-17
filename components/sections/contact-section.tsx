@@ -122,7 +122,6 @@ export function ContactSection() {
                         rounded-lg pl-3 py-0 outline-none text-primary flex items-start gap-3">
                     <MessageSquareText className="size-4 text-accent mt-3" />
                     <textarea
-                        rows="5"
                         placeholder="Your Message..."
                         className="h-full w-full bg-transparent outline-none border-l border-l-accent py-2 pl-4 resize-vertical focus:border-accent focus:ring-1 focus:ring-accent"
                     />
