@@ -6,7 +6,6 @@ import { ProjectsSection } from "@/components/sections/projects-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/layout/footer";
 import { PageShell } from "@/components/ui/page-shell";
-import { AboutSection } from "../app/about-section-placeholder";
 
 export default function Home() {
   return (
