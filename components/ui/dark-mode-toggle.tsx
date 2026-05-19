@@ -25,7 +25,7 @@ export function DarkModeToggle() {
   };
 
   return (
-    <button onClick={toggleTheme} type="button">
+    <button onClick={toggleTheme} type="button" className="hover:text-accent">
       {theme === "dark" ? <Sun /> : <Moon />}
     </button>
   );

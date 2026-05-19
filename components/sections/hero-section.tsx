@@ -62,12 +62,12 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 18 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ ...revealTransition, delay: 0.1 }}
-                            className="font-display text-balance text-[clamp(3rem,7vw,6rem)] font-semibold uppercase leading-[0.9] px-0 tracking-tight text-[#0B1C2C]"
+                            className="font-display text-balance text-[clamp(3rem,7vw,6rem)] font-semibold uppercase leading-[0.9] px-0 tracking-tight"
                         >
                             <span className="block text-primary">Ibanze</span>
                             <span className="block text-accent">Miracle</span>
                         </motion.h1>
-                        <hr className="bg-accent w-12 h-1 rounded-md border-0" />
+                        <hr className="bg-accent w-12 h-1 rounded-md border-0 -mt-3" />
                         <motion.p
                             initial={{ opacity: 0, y: 18 }}
                             animate={{ opacity: 1, y: 0 }}

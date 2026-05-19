@@ -147,6 +147,7 @@ export function ContactSection() {
                 
             {contactItems.map((item) => (
                 <div
+                    key={item.title}
                     className="flex items-center gap-5 dark:bg-surface/70 bg-surface-strong backdrop-blur-lg border border-accent/50 rounded-xl p-2 hover:border-accent transition duration-300"
                     >
                         <div className="w-10 h-10 text-accent border border-accent/50 rounded-md p-1.5">
