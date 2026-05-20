@@ -107,9 +107,9 @@ export function Navbar() {
 
                 <span
                   className={[
-                    "absolute bottom-0 left-0 h-[2px] rounded-full bg-accent transition-all duration-300",
+                    "mx-auto absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-accent transition-all duration-300",
                     activeSection === item.href
-                      ? "w-6 opacity-100"
+                      ? "w-8 opacity-100"
                       : "w-0 opacity-0",
                   ].join(" ")}
                 />
