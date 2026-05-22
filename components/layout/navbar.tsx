@@ -152,46 +152,49 @@ export function Navbar() {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
-              id="mobile-navigation"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{
-                duration: 0.24,
-                ease: smoothEase,
-              }}
-              className="overflow-hidden border-t border-accent/20 bg-background/95 backdrop-blur-xl md:hidden"
-            >
-              <nav
-                className="space-y-2 px-4 py-4"
-                aria-label="Mobile navigation"
+            <>
+              <motion.div
+                id="mobile-navigation"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{
+                  duration: 0.24,
+                  ease: smoothEase,
+                }}
+                className="overflow-hidden border-t border-accent/20 bg-background/95 backdrop-blur-xl md:hidden"
               >
-                {navigation.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className={[
-                      "block rounded-xl px-4 py-3 text-sm font-medium transition-all duration-300",
-                      activeSection === item.href
-                        ? "bg-accent/10 text-accent"
-                        : "text-primary hover:bg-accent/5 hover:text-accent",
-                    ].join(" ")}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-
-                <ButtonLink
-                  href="#contact"
-                  onClick={closeMenu}
-                  className="mt-3 w-full justify-center rounded-xl"
+                <nav
+                  className="space-y-2 px-4 py-4"
+                  aria-label="Mobile navigation"
                 >
-                  Contact Me
-                </ButtonLink>
-              </nav>
-            </motion.div>
+                  {navigation.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className={[
+                        "block rounded-xl px-4 py-3 text-sm font-medium transition-all duration-300",
+                        activeSection === item.href
+                          ? "bg-accent/10 text-accent"
+                          : "text-primary hover:bg-accent/5 hover:text-accent",
+                      ].join(" ")}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+
+                  <ButtonLink
+                    href="#contact"
+                    onClick={closeMenu}
+                    className="mt-3 w-full justify-center rounded-xl"
+                  >
+                    Contact Me
+                  </ButtonLink>
+                </nav>
+              </motion.div>
+              {/* <div className="fixed inset-0 bg-black">kdjfj</div> */}
+            </>
           )}
         </AnimatePresence>
       </div>

@@ -76,11 +76,7 @@ export function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <div
-            className="bg-surface/70 backdrop-blur-lg
-            border border-accent/70
-            rounded-2xl p-6 shadow-xl"
-          >
+          <div className="bg-surface/70 backdrop-blur-lg border border-accent/70 rounded-2xl p-6 shadow-xl">
             <form className="space-y-6">
               <div className="w-full text-primary flex items-center gap-3">
                 <Send className="size-10 text-accent p-2 rounded-lg bg-transparent border border-accent/40" />
