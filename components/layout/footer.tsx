@@ -22,13 +22,13 @@ export function Footer() {
     },
   ];
   return (
-    <footer className="border-0 border-t-2 border-t-accent">
+    <footer className="border-0 border-t-2 border-t-secondary">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-6 py-10 md:flex-row md:gap-0 md:px-12 lg:px-20">
         <div className="max-w-sm">
           <h3 className="text-3xl font-bold mb-4">
-            Miracle<span className="text-accent">.</span>
+            Miracle<span className="text-secondary">.</span>
           </h3>
-          <p className="text-primary/70">
+          <p className="text-darkPrimary/70">
             Making digital solutions that make an impact.
           </p>
         </div>
@@ -39,9 +39,9 @@ export function Footer() {
               <li key={item}>
                 <Link
                   href="#home"
-                  className="hover:text-accent flex items-center gap-2 capitalize"
+                  className="hover:text-secondary flex items-center gap-2 capitalize"
                 >
-                  <ChevronRight className="text-accent" /> {item}
+                  <ChevronRight className="text-secondary" /> {item}
                 </Link>
               </li>
             ))}
@@ -55,9 +55,9 @@ export function Footer() {
               <li key={item.link}>
                 <a
                   href="mail"
-                  className="hover:text-accent flex items-center gap-2"
+                  className="hover:text-secondary flex items-center gap-2"
                 >
-                  <span className="h-6 w-6 text-accent">
+                  <span className="h-6 w-6 text-secondary">
                     <item.icon />
                   </span>{" "}
                   {item.value}

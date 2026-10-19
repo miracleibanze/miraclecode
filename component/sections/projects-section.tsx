@@ -31,7 +31,7 @@ export function ProjectsSection() {
       >
         Projects
       </motion.h2>
-      <hr className="mb-14 bg-accent h-1 rounded-full border-0 w-12 mx-auto" />
+      <hr className="mb-14 bg-secondary h-1 rounded-full border-0 w-12 mx-auto" />
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {fullStackProjects.map((project, i) => (
           <motion.div
@@ -41,7 +41,7 @@ export function ProjectsSection() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.7, delay: i * 0.08, ease: smoothEase }}
             whileHover={{ y: -8, boxShadow: "0 8px 32px -8px #e0ae09" }}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-accent/40 bg-white dark:bg-surface shadow-[0_8px_32px_-12px_rgba(11,28,44,0.08)] transition-all duration-300 hover:border-accent/40 hover:shadow-[0_8px_32px_-8px_rgba(212,175,55,0.18)] focus-within:ring-2 focus-within:ring-accent"
+            className="group flex flex-col overflow-hidden rounded-3xl border border-secondary/40 bg-white dark:bg-surface shadow-[0_8px_32px_-12px_rgba(11,28,44,0.08)] transition-all duration-300 hover:border-secondary/40 hover:shadow-[0_8px_32px_-8px_rgba(212,175,55,0.18)] focus-within:ring-2 focus-within:ring-secondary"
             tabIndex={0}
             role="region"
             aria-labelledby={`project-${i}-title`}
@@ -63,26 +63,26 @@ export function ProjectsSection() {
               >
                 {project.title}
               </h3>
-              <p className="text-sm text-primary/70 dark:text-[#bfc9d1]">
+              <p className="text-sm text-darkPrimary/70 dark:text-[#bfc9d1]">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {project.technologies.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-medium text-[#0B1C2C] dark:text-accent"
+                    className="rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1 text-xs font-medium text-[#0B1C2C] dark:text-secondary"
                   >
                     {t}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="border-t border-accent/80 py-2 flex justify-between px-4 gap-3">
+            <div className="border-t border-secondary/80 py-2 flex justify-between px-4 gap-3">
               <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="bg-secondary/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 Live Demo <ExternalLink className="size-4" />
               </a>
@@ -90,7 +90,7 @@ export function ProjectsSection() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="bg-secondary/10 inline-flex items-center gap-1 rounded-md px-4 py-2 text-xs font-semibold transition hover:bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
               >
                 <FolderGit className="size-5" /> GitHub
               </a>

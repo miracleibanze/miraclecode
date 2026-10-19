@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import background from "@/public/ttten.svg";
 
 const manrope = Manrope({
   variable: "--font-body",
@@ -45,25 +47,18 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${sora.variable} h-full antialiased`}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const stored = localStorage.getItem("theme");
-                const isDark = stored === "dark" || 
-                  (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
-                if (isDark) {
-                  document.documentElement.classList.add("dark");
-                } else {
-                  document.documentElement.classList.remove("dark");
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body className="min-h-full bg-background text-foreground">{children}</body>
+      <body className="min-h-full bg-background text-foreground relative ">
+        <div className="background">
+          <Image
+            src={background}
+            alt="bg"
+            width={1000}
+            height={800}
+            className="w-full h-full object-cover brightness-50"
+          />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

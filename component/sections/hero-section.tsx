@@ -34,7 +34,7 @@ export function HeroSection() {
     }
     return "light";
   });
-  const src = theme === "dark" ? "/dark-profile.png" : "/light-profile.png";
+  const src = "/light-profile.png";
 
   return (
     <section
@@ -55,7 +55,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...revealTransition, delay: 0.05 }}
-              className="px-1.5 text-md py-0 font-semibold tracking-[0.1em] text-accent"
+              className="px-1.5 text-md py-0 font-semibold tracking-[0.1em] text-secondary"
             >
               Hi, I&apos;m
             </motion.p>
@@ -67,15 +67,15 @@ export function HeroSection() {
               transition={{ ...revealTransition, delay: 0.1 }}
               className="font-display text-balance text-[clamp(3rem,7vw,6rem)] font-semibold uppercase leading-[0.9] px-0 tracking-tight"
             >
-              <span className="block text-primary">Ibanze</span>
-              <span className="block text-accent">Miracle</span>
+              <span className="block text-darkPrimary">Ibanze</span>
+              <span className="block text-secondary">Miracle</span>
             </motion.h1>
-            <hr className="bg-accent w-12 h-1 rounded-md border-0 -mt-3" />
+            <hr className="bg-secondary w-12 h-1 rounded-md border-0 -mt-3" />
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...revealTransition, delay: 0.14 }}
-              className="text-sm font-semibold uppercase tracking-[0.34em] text-primary sm:text-base"
+              className="text-sm font-semibold uppercase tracking-[0.34em] text-darkPrimary sm:text-base"
             >
               Full-Stack Developer
             </motion.p>
@@ -84,7 +84,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...revealTransition, delay: 0.18 }}
-              className="max-w-md text-base leading-8 text-primary/70 sm:text-lg"
+              className="max-w-md text-base leading-8 text-darkPrimary/70 sm:text-lg"
             >
               I build scalable and user-focused web applications that solve real
               world problems.
@@ -118,7 +118,7 @@ export function HeroSection() {
             transition={{ ...revealTransition, delay: 0.28 }}
             className="w-full sm:w-auto"
           >
-            <p className="text-sm font-semibold text-primary mb-3">
+            <p className="text-sm font-semibold text-darkPrimary mb-3">
               Connect with me
             </p>
             <div className="flex gap-3">
@@ -128,7 +128,7 @@ export function HeroSection() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center size-11 rounded-full border-3 p-1 border-accent/60 hover:bg-accent/10 hover:border-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+                  className="inline-flex items-center justify-center size-11 rounded-full border-3 p-1 border-secondary/60 hover:bg-secondary/10 hover:border-secondary transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/40"
                   aria-label={label}
                 >
                   <Icon className="size-5" />
@@ -158,17 +158,7 @@ export function HeroSection() {
                 height={1600}
                 priority
                 sizes="(min-width: 1024px) 38vw, 88vw"
-                className="block dark:hidden h-auto w-full object-cover"
-              />
-
-              <Image
-                src="/dark-profile.png"
-                alt="Portrait of Ibanze Miracle"
-                width={1600}
-                height={1600}
-                priority
-                sizes="(min-width: 1024px) 38vw, 88vw"
-                className="hidden dark:block h-auto w-full object-cover"
+                className="h-auto w-full object-cover"
               />
             </>
           </motion.div>

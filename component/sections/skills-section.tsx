@@ -65,8 +65,8 @@ export function SkillsSection() {
           className="lg:col-span-2"
         >
           <h2 className="mb-2 text-2xl font-bold tracking-tight ">About me</h2>
-          <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />
-          <p className="mb-8 max-w-xl text-sm leading-8 text-primary/70 sm:text-base">
+          <hr className="mb-8 bg-secondary border-0 w-12 h-1 rounded-full" />
+          <p className="mb-8 max-w-xl text-sm leading-8 text-darkPrimary/70 sm:text-base">
             I am a passionate full-stack developer with experience in building
             modern web applications. I specialize in both front-end and back-end
             development, delivering clean, efficient and scalable solutions.
@@ -82,7 +82,7 @@ export function SkillsSection() {
             <h2 className="mb-2 text-2xl font-bold tracking-tight ">
               My Skills
             </h2>
-            <hr className="mb-8 bg-accent border-0 w-12 h-1 rounded-full" />
+            <hr className="mb-8 bg-secondary border-0 w-12 h-1 rounded-full" />
           </div>
           {skills.map((skill, i) => (
             <motion.div
@@ -95,12 +95,12 @@ export function SkillsSection() {
                 y: -10,
                 boxShadow: "0 12px 30px -16px rgba(212,175,55,0.35)",
               }}
-              className="group rounded-lg border-2 border-accent/30 bg-surface/60 p-4 transition-all duration-300 hover:border-[#D4AF37]/40"
+              className="group rounded-lg border-2 border-secondary/30 bg-surface/60 p-4 transition-all duration-300 hover:border-[#D4AF37]/40"
               tabIndex={0}
               role="region"
               aria-labelledby={`skill-${i}-title`}
             >
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-3xl dark:bg-accent/20 text-accent border-2 border-accent/60">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-3xl dark:bg-secondary/20 text-secondary border-2 border-secondary/60">
                 {skill.icon}
               </div>
               <h3
@@ -109,10 +109,10 @@ export function SkillsSection() {
               >
                 {skill.title}
               </h3>
-              <ul className="space-y-0 text-sm text-primary/70">
+              <ul className="space-y-0 text-sm text-darkPrimary/70">
                 {skill.items.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-2 min-w-2 rounded-full bg-accent" />
+                    <span className="mt-1 inline-block h-2 min-w-2 rounded-full bg-secondary" />
                     <span>{item}</span>
                   </li>
                 ))}

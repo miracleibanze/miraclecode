@@ -1,80 +1,52 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
-  --background: #ffffff;
-  --foreground: #000d20;
-  --primary: #101624  ;
-  --accent: 224 174 9;
-  --muted: #a0aec0;
-  --surface: #f8fafc;
-  --surface-strong: #edf2f7;
-
-  /* Extras (needed for clean UI) */
-  --border: #e2e8f0;
-  
-  --hover: #f1f5f9;
-  --accent-soft: rgba(212, 175, 55, 0.15);
+  --background: white;
+  --foreground: #03012b;
+  --primary: #093be0;
+  --secondary: #efba0b;
+  --text: #03003c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-accent: rgb(var(--accent));
-  --color-muted: var(--muted);
-  --color-surface: var(--surface);
-  --color-surface-strong: var(--surface-strong);
-
-  /* added mappings */
-  --color-border: var(--border);
-  --color-hover: var(--hover);
-  --color-accent-soft: var(--accent-soft);
-
-  --font-sans: var(--font-body);
-  --font-display: var(--font-display);
+  --color-secondary: var(--secondary);
+  --color-darkPrimary: var(--text);
 }
 
 html {
   scroll-behavior: smooth;
   background: var(--background);
 }
-html.dark {
---background: #02001c;
-  --foreground: #f8fafc;
-  --primary: #f8fafc;
-  --accent:  224 174 9;
-  --muted: #a0aec0; 
-  --surface: #111a27; 
-  --surface-strong: #121a27;
-
-  /* Extras (must match light system) */
-  --border: #1f2937;
-  --hover: #1a2433;
-  --accent-soft: rgba(212, 175, 55, 0.2);
-}
-
-.border-accent {
-  border: 1.5px solid rgb(var(--accent));
-}
 
 body {
   min-height: 100vh;
 
+  /* background-color: gray; */
   background: var(--background);
 
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
 
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  /* text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; */
+}
+* {
+  box-sizing: border-box;
+}
+
+div.background {
+  position: fixed;
+  inset: 0;
+  opacity: 0.5;
 }
 
 a,
 button {
-  transition-property: color, background-color, border-color, box-shadow, transform,
-    opacity;
+  transition-property:
+    color, background-color, border-color, box-shadow, transform, opacity;
   transition-duration: 200ms;
   transition-timing-function: ease;
 }
@@ -89,5 +61,29 @@ button {
 }
 
 article {
-  color: #e0ae09
+  color: #e0ae09;
+}
+.bg-watery {
+  background: linear-gradient(
+    to bottom left,
+    #c9d6fd7d 0%,
+    #ffffff35 18%,
+    #ffffff12 45%,
+    #90a5e837 60%,
+    #7e96e537 75%,
+    #6a86e162 100%
+  );
+
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+  border: 1px solid #ffffff45;
+  border-top: 1px solid #ffffff70;
+  border-bottom: 1px solid #ffffff20;
+
+  box-shadow:
+    inset 0 1px 1px #ffffff50,
+    inset 0 -1px 1px #ffffff15,
+    0 8px 32px #00000015,
+    0 5px 40px #093be055;
 }
